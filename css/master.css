@@ -63,190 +63,147 @@
     text-align: left;
   }
 
-.bgslidemenu {
-    font: bold 16px 'Bitter', sans-serif; /* use google font */
-    position: relative;
-    width: 100%;
-    text-align: center;/* set the text alignment here */
+header{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.bgslidemenu:after { /* clear menu */
-    content: '';
-    clear: both;
-    display: block;
+#logoarea{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2; /* width of logo area - 2/10 */
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
 }
 
-/* Top Level Menu */
-.bgslidemenu ul {
-    z-index: 100;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    list-style: none;
-    float: right; /* change to "left" to left align menu */
+#logoarea img{
+  width: 60px; /* width of logo */
+	border-width: 0;
+  height: auto;
 }
 
-/* Top level list items */
-.bgslidemenu ul li {
-    position: relative;
-    display: inline;
-    margin-right: 20px; /* spacing between each top level menu item */
-    float: left;
+.navmenu{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8; /* width of nav menu area - 8/10 */
 }
 
-/* Top level menu items link style */
-.bgslidemenu ul li a {
-    display: block;
-    position: relative;
-    color: white;
-    padding: 14px 10px;
-    color: black;
-    text-decoration: none;
+.navmenu li{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
-.bgslidemenu ul li a:link, .bgslidemenu ul li a:visited {
-    color: black;
+.navmenu li a{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90px; /* height of links */
+  padding: 0 10px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: orange; /* default background color */
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* center text horizontally */
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* center text vertically */
+  box-shadow: 0-10px 3px rgba(0,0,0,.1) inset;
+  transition: all .3s;
 }
 
-/* Top level menu items link style on hover */
-.bgslidemenu ul li:hover > a {
-    color: purple !important;
+.navmenu li:nth-of-type(2) a{
+  background: #FF0080;
 }
 
-/* LIs links with a sub UL style */
-.bgslidemenu ul li > a {
-    /* add padding to accomodate arrow inside LIs */
-    padding-right: 25px;
+.navmenu li:nth-of-type(3) a{
+  background: #C1E2DE;
 }
 
-/* LIs links with NO sub UL style */
-.bgslidemenu ul li > a:only-child {
-    /* undo padding for non submenu LIs */
-    padding-right: 10px;
+.navmenu li:nth-of-type(4) a{
+  background: #90D531;
 }
 
-/* LIs links with a sub UL pseudo class (Add down arrow) */
-.bgslidemenu ul li > a:after {
-    /* add arrow inside LIs */
-    content: "";
-    position: absolute;
-    height: 0;
-    width: 0;
-    border: 5px solid transparent;
-    border-top-color: black;
-    top: 50%;
-    transform: translateY(-20%);
-    right: 8px;
+.navmenu li:nth-of-type(5) a{
+  background: #FDE74C;
 }
 
-/* LIs links with NO sub UL pseudo class */
-.bgslidemenu ul li > a:only-child:after {
-    /* undo arrow for non submenu LIs */
-    display: none;
+.navmenu li a:hover{
+  opacity: .8;
+  box-shadow: 0-10px 3px rgba(0,0,0,.2) inset, 0 15px 15px -5px gray;
+  -moz-transform: rotateX(20deg);
+  -webkit-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+  -moz-transform-origin: 50% 0;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: all .5s;
+  transition: all .3s;
 }
 
-/* Sub ULs style */
-.bgslidemenu ul li ul {
-    position: absolute;
-    left: -5000px;
-    top: auto;
-    opacity: 0;
-    width: 200px; /* width of drop down menus */
-    visibility: hidden;
-    padding-top: 80px; /* Add large top padding to drop down menu */
-    z-index: -1;
-    background: #F3F3F3;
-    transform: translateY(100px);
-    -webkit-transition: opacity .3s, transform .5s, visibility 0s .3s, left 0s .3s;
-    transition: opacity .3s, transform .5s, visibility 0s .3s, left 0s .3s;
+@media (max-width: 680px){
+  header{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* switch to vertical stacked layout */
+    font-size: .9em; /* decrease font size */
+  }
+  
+  .navmenu{
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; /* allow wrap of menu items */
+  }
+
+  .navmenu li a{
+    height: 80px;
+  }
 }
 
-/* Sub UL style on hover */
-.bgslidemenu ul li:hover > ul {
-    visibility: visible;
-    left: -30px;
-    transform: translateY(-80px); /* move drop down menu upwards (should be smaller than padding-top value above) */
-    opacity: 1;
-    -webkit-transition: opacity 1s, transform .5s;
-    transition: opacity 1s, transform .5s;
-}
+<!--[if lte IE 9]>
+	/* IE9 specific CSS */
 
-/* Sub level Menu list items (alters style from Top level List Items) */
-.bgslidemenu ul li ul li {
-    display: list-item;
-    float: none;
-    overflow: hidden;
-}
+	header{
+		overflow: hidden;
+	}
+	
+	#logoarea{
+		float: left;
+	}
 
-/* Add animated line to sub menu item on Mouseover */
-.bgslidemenu ul li ul li:after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 5px;
-    background: purple;
-    left: 0;
-    top: 50%;
-    transform: translate3d(-100%, -50%, 0);
-    transition: transform .3s;
-}
+	.navmenu{
+		float: left;
+	}
 
-.bgslidemenu ul ul li:hover:after {
-    transform: translate3d(0, -50%, 0);
-}
+	.navmenu li{
+		display: inline;
+	}
 
-/* Sub Levels link style on hover and when active */
-.bgslidemenu ul ul li:hover > a {
-    color: purple !important;
-}
-
-/* Sub level menu links style */
-.bgslidemenu ul li ul li a {
-    font: normal 16px 'Bitter', sans-serif;
-    padding: 10px;
-    padding-left: 40px; /* Add left padding to sub menu links to accommodate animated line */
-    position: relative;
-    margin: 0;
-}
-
-
-/* ####### responsive layout CSS ####### */
-@media (max-width: 700px) {
-    /* 
-			For mobile and screen browser windows
-			Get Sub ULs to expand entire width of document and drop down
-			Changes menu reveal type from "visibility" to "display" to overcome bug. See comments below
-		*/
-
-	.bgslidemenu ul {
-        float: none;
-    }
-
-    .bgslidemenu ul li {
-        position: relative;
-        display: block;
-        width: 100%;
-    }
-
-    .bgslidemenu ul li ul {
-        width: 100%;
-        position: relative;
-        border-top: 2px solid #eee;
-        /* change menu reveal type from "visibility" to "display". Former seems to cause browser to jump to top of page sometimes when menu header is tapped on */
-        display: none;
-    }
-
-    .bgslidemenu ul li:hover > ul {
-        display: block;
-        padding-top: 0;
-        transform: none;
-        z-index: 10000;
-        left: 0 !important;
-        top: auto;
-    }
-
-    .bgslidemenu ul ul li:hover > ul {
-        left: 0 !important;
-        top: auto;
-    }
-}
+	.navmenu li a{
+		padding: 10px;
+		float: left;
+		display: block;
+	}
+<![endif]-->

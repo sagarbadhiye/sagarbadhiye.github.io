@@ -30,9 +30,8 @@
    }
 
   h2 {
-    color: purple/* set the text color of to #075AAB here */
-    /* set both the bottom margin and top margin to 2.5rem here */
-    margin-bottom: 2.5rem;
+    color: purple; /* set the text color of to #075AAB here */
+    margin-bottom: 2.5rem; /* set both the bottom margin and top margin to 2.5rem here */
     margin-top: 2.5rem;
 
    }

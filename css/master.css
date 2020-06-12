@@ -67,6 +67,7 @@
     font: bold 16px 'Bitter', sans-serif; /* use google font */
     position: relative;
     width: 100%;
+    text-align: center;/* set the text alignment here */
 }
 
 .bgslidemenu:after { /* clear menu */

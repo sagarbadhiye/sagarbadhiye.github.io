@@ -56,6 +56,12 @@
     margin-top: 3rem;
   }
 
+  p {
+    background-color: beige;/* set the background color here */
+    color: purple;/* set the text color to black here */
+    font-family: Arial, Helvetica, sans-serif;/* set the font here */
+    text-align: justify;/* set the text alignment here */  
+  }
   /* this controls how the bullet points in the resume page looks */
   ul {
     display: table;

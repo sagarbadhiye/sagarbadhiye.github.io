@@ -76,9 +76,9 @@ header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 2rem;
-      -ms-flex: 2rem;
-          flex: 2rem; /* width of logo area - 2/10 */
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2; /* width of logo area - 2/10 */
  -webkit-box-pack: center;
      -ms-flex-pack: center;
          justify-content: center;
@@ -101,9 +101,9 @@ header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 8rem;
-      -ms-flex: 8rem;
-          flex: 8rem; /* width of nav menu area - 8/10 */
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8; /* width of nav menu area - 8/10 */
 }
 
 .navmenu li{

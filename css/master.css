@@ -101,9 +101,9 @@ header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 12;
-      -ms-flex: 12;
-          flex: 12; /* width of nav menu area - 8/10 */
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10; /* width of nav menu area - 8/10 */
 }
 
 .navmenu li{
@@ -116,7 +116,7 @@ header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px; /* height of links */
+  height: 80px; /* height of links */
   padding: 0 10px;
   color: black;
   text-transform: uppercase;
@@ -178,7 +178,7 @@ header{
   }
 
   .navmenu li a{
-    height: 40px;
+    height: 80px;
   }
 }
 

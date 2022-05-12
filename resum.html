@@ -1,0 +1,471 @@
+<html><head><style type="text/css">pre { margin: 1px }
+			.fmt0 {  } /* normal */
+			.fmt1 {  } /* background */
+			.fmt2 { background-color: #ffcabf; } /* line:error */
+			.fmt3 { background-color: #fffbbf; } /* line:warning */
+			.fmt4 { background-color: #bfd6ff; } /* line:badbox */
+			.fmt5 {  } /* line:bookmark */
+			.fmt6 {  } /* line:bookmark0 */
+			.fmt7 {  } /* line:bookmark1 */
+			.fmt8 {  } /* line:bookmark2 */
+			.fmt9 {  } /* line:bookmark3 */
+			.fmt10 {  } /* line:bookmark4 */
+			.fmt11 {  } /* line:bookmark5 */
+			.fmt12 {  } /* line:bookmark6 */
+			.fmt13 {  } /* line:bookmark7 */
+			.fmt14 {  } /* line:bookmark8 */
+			.fmt15 {  } /* line:bookmark9 */
+			.fmt16 { color: #555580; } /* magicComment */
+			.fmt17 { background-color: #a8cf83; } /* commentTodo */
+			.fmt18 { color: #808080; } /* comment */
+			.fmt19 { color: #800000; } /* keyword */
+			.fmt20 { font-weight: 700;color: #0095ff; } /* extra-keyword */
+			.fmt21 { color: #808000; } /* math-keyword */
+			.fmt22 { border-bottom: 1px solid #0000ff;color: #0000ff; } /* link */
+			.fmt23 { font-weight: 700;color: #0055ff; } /* align-ampersand */
+			.fmt24 { color: #008080; } /* verbatim */
+			.fmt25 { color: #800000; } /* sweave-block */
+			.fmt26 { font-weight: 700;color: #0095ff; } /* sweave-delimiter */
+			.fmt27 { color: #800000; } /* pweave-block */
+			.fmt28 { font-weight: 700;color: #0095ff; } /* pweave-delimiter */
+			.fmt29 { color: #804000; } /* picture */
+			.fmt30 { color: #c06000; } /* picture-keyword */
+			.fmt31 { font-weight: 700;background-color: #ffff7f; } /* braceMatch */
+			.fmt32 { font-weight: 700;color: #ffff7f;background-color: #c00000; } /* braceMismatch */
+			.fmt33 { color: #000000;background-color: #ffef0b; } /* search */
+			.fmt34 { color: #008000; } /* numbers */
+			.fmt35 { color: #509600; } /* math-delimiter */
+			.fmt36 { color: #ff0000; } /* text */
+			.fmt37 { color: #ff0088; } /* escapeseq */
+			.fmt38 { border-bottom: 1px dashed #ff0000; } /* spellingMistake */
+			.fmt39 { border-bottom: 1px dashed #008000; } /* wordRepetition */
+			.fmt40 { border-bottom: 1px dashed #008000; } /* wordRepetitionLongRange */
+			.fmt41 { text-decoration: line-through; } /* badWord */
+			.fmt42 { border-bottom: 1px dashed #000080; } /* grammarMistake */
+			.fmt43 { background-color: #00ffa0; } /* grammarMistakeSpecial1 */
+			.fmt44 { background-color: #00c0ff; } /* grammarMistakeSpecial2 */
+			.fmt45 { background-color: #00ff00; } /* grammarMistakeSpecial3 */
+			.fmt46 { background-color: #c8ff61; } /* grammarMistakeSpecial4 */
+			.fmt47 { background-color: #ffbf9f; } /* latexSyntaxMistake */
+			.fmt48 { font-style: italic;color: #0000ff; } /* temporaryCodeCompletion */
+			.fmt49 { color: #000080; } /* environment */
+			.fmt50 { color: #008000; } /* referencePresent */
+			.fmt51 { border-bottom: 1px dashed #008000;color: #008000; } /* referenceMissing */
+			.fmt52 { border-bottom: 1px dashed #800080;color: #800080; } /* referenceMultiple */
+			.fmt53 { color: #008000; } /* citationPresent */
+			.fmt54 { border-bottom: 1px dashed #008000;color: #008000; } /* citationMissing */
+			.fmt55 { color: #008000; } /* packagePresent */
+			.fmt56 { border-bottom: 1px dashed #008000;color: #008000; } /* packageMissing */
+			.fmt57 { font-weight: 700;color: #000000; } /* structure */
+			.fmt58 { background-color: #eeeeff; } /* current */
+			.fmt59 { background-color: #b2d8ff; } /* selection */
+			.fmt60 { background-color: #ffaaaa; } /* replacement */
+			.fmt61 { text-decoration: line-through;background-color: #ffaaaa; } /* diffDelete */
+			.fmt62 { background-color: #aaffaa; } /* diffAdd */
+			.fmt63 { background-color: #ffff50; } /* diffReplace */
+			.fmt64 { background-color: #ddffcc; } /* previewSelection */
+			.fmt65 { font-weight: 700;color: #0095ff; } /* txs-test */
+			.fmt66 { font-weight: 700; } /* txs-test-summary */
+			.fmt67 { color: #008000; } /* txs-test-pass */
+			.fmt68 { color: #c00000; } /* txs-test-fail */
+			.fmt69 { color: #ea8800; } /* txs-test-warn */
+			.fmt70 { color: #808000; } /* txs-test-qdebug */
+			.fmt71 { color: #ffa500; } /* dtx:guard */
+			.fmt72 { font-weight: 700;color: #006400; } /* dtx:macro */
+			.fmt73 { color: #008080; } /* dtx:verbatim */
+			.fmt74 { color: #cc8100; } /* dtx:specialchar */
+			.fmt75 { font-weight: 700;color: #10c010; } /* dtx:commands */
+			.fmt76 { color: #b200ff; } /* lua:keyword */
+			.fmt77 { color: #808080; } /* lua:comment */
+			.fmt78 { color: #804000; } /* asymptote:block */
+			.fmt79 { color: #800080; } /* asymptote:keyword */
+			.fmt80 { color: #808000; } /* asymptote:type */
+			.fmt81 { color: #008000; } /* asymptote:numbers */
+			.fmt82 { color: #000080; } /* asymptote:string */
+			.fmt83 { color: #808080; } /* asymptote:comment */
+			.fmt84 { color: #808080; } /* qtscript:comment */
+			.fmt85 { color: #008000; } /* qtscript:string */
+			.fmt86 { color: #000080; } /* qtscript:number */
+			.fmt87 { color: #808000; } /* qtscript:keyword */
+			.fmt88 { color: #800000; } /* qtscript:txs-variable */
+			.fmt89 { font-style: italic; } /* qtscript:txs-function */
+			.fmt90 { background-color: #ffff7f; } /* preedit */
+		</style></head><body><pre><span class="fmt19">\documentclass</span>[10pt,a4paper,ragged2e,withhyper]{<span class="fmt56">altacv</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\geometry</span></span>{<span class="fmt38">left</span>=1.25cm,<span class="fmt38">right</span>=1.25cm,<span class="fmt38">top</span>=1.5cm,<span class="fmt38">bottom</span>=1.5cm,<span class="fmt38">columnsep</span>=1.2cm} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19">\usepackage</span>{<span class="fmt55">paracol</span>} </pre>
+		<pre><span class="fmt19">\usepackage</span>{<span class="fmt55">datetime</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\ifxetexorluatex</span></span> </pre>
+		<pre>  <span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">If</span><span class="fmt18"> </span><span class="fmt18">using</span><span class="fmt18"> </span><span class="fmt18">xelatex</span><span class="fmt18"> </span><span class="fmt18">or</span><span class="fmt18"> </span><span class="fmt18">lualatex:</span> </pre>
+		<pre>  <span class="fmt19"><span class="fmt47">\setmainfont</span></span>{<span class="fmt38">Lato</span>} </pre>
+		<pre><span class="fmt19">\else</span> </pre>
+		<pre>  <span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">If</span><span class="fmt18"> </span><span class="fmt18">using</span><span class="fmt18"> </span><span class="fmt18">pdflatex:</span> </pre>
+		<pre>  <span class="fmt19">\usepackage</span>[default]{<span class="fmt55">lato</span>} </pre>
+		<pre><span class="fmt19">\fi</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">Change</span><span class="fmt18"> </span><span class="fmt18">the</span><span class="fmt18"> </span><span class="fmt18">colours</span><span class="fmt18"> </span><span class="fmt18">if</span><span class="fmt18"> </span><span class="fmt18">you</span><span class="fmt18"> </span><span class="fmt18">want</span><span class="fmt18"> </span><span class="fmt18">to</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\definecolor</span></span>{<span class="fmt38">VividPurple</span>}{HTML}{3E0097} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\definecolor</span></span>{<span class="fmt38">SlateGrey</span>}{HTML}{2E2E2E} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\definecolor</span></span>{<span class="fmt38">LightGrey</span>}{HTML}{666666} </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\colorlet{name}{black}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\colorlet</span></span>{<span class="fmt38">tagline</span>}{<span class="fmt38">VividPurple</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\colorlet</span></span>{<span class="fmt38">heading</span>}{<span class="fmt38">VividPurple</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\colorlet</span></span>{<span class="fmt38">headingrule</span>}{<span class="fmt38">VividPurple</span>} </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\colorlet{subheading}{PastelRed}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\colorlet</span></span>{<span class="fmt38">accent</span>}{<span class="fmt38">VividPurple</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\colorlet</span></span>{<span class="fmt38">emphasis</span>}{<span class="fmt38">SlateGrey</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\colorlet</span></span>{<span class="fmt38">body</span>}{<span class="fmt38">LightGrey</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19">\renewcommand</span>{<span class="fmt19">\itemmarker</span>}{{<span class="fmt19">\small\textbullet</span>}} </pre>
+		<pre><span class="fmt19">\renewcommand</span>{<span class="fmt19">\ratingmarker</span>}{<span class="fmt19">\faCircle</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19">\input</span>{pubs-authoryear} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19">\addbibresource</span>{sample.bib} </pre>
+		<pre> </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">document</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\name</span></span>{<span class="fmt38">Sagarkumar</span> <span class="fmt38">Badhiye</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\tagline</span></span>{<span class="fmt38">Assistant</span> Professor (Sr. Grade)}<span class="fmt18">%%\&amp;</span><span class="fmt18"> </span><span class="fmt18">Proud</span><span class="fmt18"> </span><span class="fmt18">Geek%</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\photoR</span></span>{2.5cm}{<span class="fmt38">sagar</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\personalinfo</span></span>{<span class="fmt18">%</span> </pre>
+		<pre>  <span class="fmt19"><span class="fmt47">\email</span></span>{<span class="fmt38">sagarbadhiye</span>@<span class="fmt38">gmail</span>.<span class="fmt38">com</span>} </pre>
+		<pre>   <span class="fmt19"><span class="fmt47">\phone</span></span>{+91-8669024256} </pre>
+		<pre>  <span class="fmt19"><span class="fmt47">\mailaddress</span></span>{57, <span class="fmt38">Mahesh</span> <span class="fmt38">Nagar</span>, <span class="fmt38">Nagpur-</span>440013}<span class="fmt19">\\</span> </pre>
+		<pre>  <span class="fmt19"><span class="fmt47">\location</span></span>{<span class="fmt38">Maharashtra</span>, <span class="fmt38">India</span>} </pre>
+		<pre>  <span class="fmt19"><span class="fmt47">\linkedin</span></span>{<span class="fmt38">sagarbadhiye</span>} </pre>
+		<pre>  <span class="fmt19"><span class="fmt47">\orcid</span></span>{0000-0002-0710-3761} </pre>
+		<pre>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\makecvheader</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\AtBeginEnvironment</span></span>{<span class="fmt38">itemize</span>}{<span class="fmt19">\small</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Professional</span> <span class="fmt38">Summary</span>} </pre>
+		<pre><span class="fmt18">%\begin{quote}</span> </pre>
+		<pre><span class="fmt38">Passionate</span> <span class="fmt38">Assistant</span> Professor <span class="fmt38">with</span> 11+ <span class="fmt38">years</span> of <span class="fmt38">demonstrated</span> <span class="fmt38">history</span> <span class="fmt39">of</span> <span class="fmt38">working</span> in <span class="fmt38">administering</span> <span class="fmt38">education</span> <span class="fmt38">and</span> <span class="fmt38">classroom</span> <span class="fmt38">procedures</span> <span class="fmt38">both</span> <span class="fmt38">autonomously</span> <span class="fmt38">and</span> in <span class="fmt38">collaboration</span> <span class="fmt38">with</span> <span class="fmt38">department</span> <span class="fmt38">faculty</span> <span class="fmt38">and</span> <span class="fmt38">leaders</span>. <span class="fmt38">Skilled</span> in <span class="fmt38">Theoretical</span> <span class="fmt38">Foundation</span> of Computer <span class="fmt38">Science</span>, Compiler Design, <span class="fmt38">NLP</span>, Data <span class="fmt38"><span class="fmt40">Science</span></span>, Time <span class="fmt38">Series</span> Analysis Python, R Tool, LaTeX, <span class="fmt38">and</span> HTML. <span class="fmt38">Strong</span> <span class="fmt38">education</span> <span class="fmt38">professional</span> <span class="fmt38">with</span> a <span class="fmt38">Doctor</span> of <span class="fmt38">Philosophy</span> - <span class="fmt38">PhD</span> <span class="fmt38">focused</span> in Computer <span class="fmt38">Science</span> <span class="fmt38">and</span> Engineering <span class="fmt38">from</span> <span class="fmt38">Sant</span> <span class="fmt38">Gadge</span> <span class="fmt38">Baba</span> <span class="fmt38">Amravati</span> <span class="fmt38">University</span>, <span class="fmt38"><span class="fmt39">Amravati</span></span>. </pre>
+		<pre><span class="fmt18">%\end{quote}</span> </pre>
+		<pre><span class="fmt18">%%</span><span class="fmt18"> </span><span class="fmt18">Set</span><span class="fmt18"> </span><span class="fmt18">the</span><span class="fmt18"> </span><span class="fmt18">left/right</span><span class="fmt18"> </span><span class="fmt18">column</span><span class="fmt18"> </span><span class="fmt18">width</span><span class="fmt18"> </span><span class="fmt18">ratio</span><span class="fmt18"> </span><span class="fmt18">to</span><span class="fmt18"> </span><span class="fmt18">6:4.</span> </pre>
+		<pre><span class="fmt19">\columnratio</span>{0.6} </pre>
+		<pre> </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">paracol</span></span><span class="fmt20">}</span>{2} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Certifications</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> {<span class="fmt38">Build</span> <span class="fmt38">Your</span> <span class="fmt38">Own</span> <span class="fmt38">Chatbots</span>,}{ IBM <span class="fmt38">Developer</span> <span class="fmt38">Skills</span> <span class="fmt38">Network</span>, <span class="fmt38">Cognitive</span> <span class="fmt38">Class</span>.ai} </pre>
+		<pre><span class="fmt19">\item</span>{Python <span class="fmt38">for</span> <span class="fmt38">Everybody</span> <span class="fmt38">Specialization</span>, <span class="fmt38">University</span> of Michigan, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">What</span> is Data <span class="fmt38">Science</span>? , IBM, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">The</span> Data <span class="fmt38">Scientist</span>’s <span class="fmt38">Toolbox</span>, Johns <span class="fmt38">Hopkins</span> <span class="fmt38">University</span>, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">Build</span> <span class="fmt38">Your</span> Portfolio Website <span class="fmt38">with</span> HTML <span class="fmt38">and</span> <span class="fmt38">CSS</span>, <span class="fmt38">Project</span> <span class="fmt38">Network</span>, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">Introduction</span> to Time <span class="fmt38">Series</span> Analysis in R, <span class="fmt38">Project</span> <span class="fmt38">Network</span>, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">Sequences</span>, Time <span class="fmt38">Series</span> <span class="fmt38">and</span> <span class="fmt38">Prediction</span>, <span class="fmt38">deeplearning</span>.ai, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">Introduction</span> to Natural <span class="fmt38">Language</span> <span class="fmt38">Processing</span> in Python, <span class="fmt38">Project</span> <span class="fmt38">Network</span>, <span class="fmt38">Coursera</span>} </pre>
+		<pre><span class="fmt19">\item</span>{Data Analysis <span class="fmt38">with</span> Python, <span class="fmt38">Cognitive</span> <span class="fmt38">Class</span>.ai} </pre>
+		<pre><span class="fmt19">\item</span>{Python 101 <span class="fmt38">for</span> Data <span class="fmt38">Science</span>, <span class="fmt38">Cognitive</span> <span class="fmt38">Class</span>.ai} </pre>
+		<pre><span class="fmt19">\item</span>{<span class="fmt38">The</span> Data <span class="fmt38">Science</span> <span class="fmt38">Course</span> 2020, <span class="fmt38">Udemy</span>} </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Experience</span>} <span class="fmt19">\Large</span>{Total: 11 <span class="fmt38">Years</span> <span class="fmt38">and</span> 6 <span class="fmt38">Months</span>}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">Assistant</span> Professor (Sr. Grade)}{<span class="fmt38">Symbiosis</span> Institute of <span class="fmt38">Technology</span>}{<span class="fmt38">Feb</span> 2022 - <span class="fmt38">till</span> <span class="fmt38">date</span>}{<span class="fmt38">Nagpur</span>, <span class="fmt38">Maharashtra</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\cvtag{13</span><span class="fmt18"> </span><span class="fmt18">Years</span><span class="fmt18"> </span><span class="fmt18">and</span><span class="fmt18"> </span><span class="fmt18">9</span><span class="fmt18"> </span><span class="fmt18">Months</span><span class="fmt18"> </span><span class="fmt18">as</span><span class="fmt18"> </span><span class="fmt18">on</span><span class="fmt18"> </span><span class="fmt18">31st</span><span class="fmt18"> </span><span class="fmt18">Dec.</span><span class="fmt18"> </span><span class="fmt18">2021}\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">Associate</span> Professor}{<span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>}{<span class="fmt38">July</span> 2021 - <span class="fmt38">Feb</span> 2022}{<span class="fmt38">Wardha</span>, <span class="fmt38">Maharashtra</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Developed</span> a Bot (<span class="fmt38">BITBot</span>) <span class="fmt38">for</span> <span class="fmt38">institutes</span> <span class="fmt38">website</span> to <span class="fmt38">help</span> <span class="fmt38">visitors</span> <span class="fmt38">get</span> <span class="fmt38">admission</span> <span class="fmt38">and</span> <span class="fmt38">institute</span> <span class="fmt38">related</span> <span class="fmt38">information</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Working</span> on <span class="fmt38">development</span> of Management <span class="fmt40">Information</span> System (<span class="fmt38">BITMIS</span>) <span class="fmt38">for</span> <span class="fmt38">our</span> <span class="fmt38">institute</span> <span class="fmt38">with</span> <span class="fmt38">group</span> of <span class="fmt38">students</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Helped</span> <span class="fmt38"><span class="fmt39">students</span></span> to <span class="fmt38">develop</span> <span class="fmt38">and</span> <span class="fmt38">demonstrate</span> <span class="fmt38">broad</span>, <span class="fmt38">unifying</span>, <span class="fmt38">and</span> <span class="fmt38">differentiated</span> <span class="fmt38">knowledge</span>, <span class="fmt38">fluency</span> in <span class="fmt38">communication</span> <span class="fmt38">and</span> <span class="fmt38">effective</span> problem-<span class="fmt38">solving</span> <span class="fmt38">skills</span>. </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">Assistant</span> Professor <span class="fmt38">and</span> <span class="fmt38">Department</span> Co-<span class="fmt38">ordinator</span>}{<span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>}{Aug 2017 - <span class="fmt38">June</span> 2021}{<span class="fmt38">Wardha</span>, <span class="fmt38">Maharashtra</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Mentored</span> <span class="fmt38">PASUS</span> <span class="fmt38">group</span> <span class="fmt38">for</span> Smart <span class="fmt38">India</span> <span class="fmt38">Hackathon</span> 2020 <span class="fmt38">for</span> <span class="fmt38">developing</span> <span class="fmt38">project</span> on "Mobile <span class="fmt38">based</span> <span class="fmt38">Detection</span> <span class="fmt38">and</span> <span class="fmt38">Prevention</span> of <span class="fmt38">Alzheimer's</span> <span class="fmt38">Disease</span>" </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Developed</span> digital <span class="fmt38">contents</span> in <span class="fmt38">form</span> of <span class="fmt38">powerpoint</span> <span class="fmt38">presentations</span> <span class="fmt38">and</span> <span class="fmt38">videos</span> <span class="fmt38">for</span> online <span class="fmt38">and</span> offline <span class="fmt38">teaching</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Revised</span> <span class="fmt38">course</span> <span class="fmt38">objectives</span>, <span class="fmt38"><span class="fmt39">course</span></span> <span class="fmt38">materials</span>, <span class="fmt38">instructional</span> <span class="fmt38">and</span> <span class="fmt38">assessment</span> <span class="fmt38">strategies</span> <span class="fmt38">for</span> <span class="fmt38">core</span> <span class="fmt38">courses</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Planning</span> <span class="fmt38">and</span> Implementation of <span class="fmt38">Academic</span> <span class="fmt38">Activities</span> in <span class="fmt38">the</span> <span class="fmt38">Department</span> as <span class="fmt38">Coordinator</span> [23 August 2018 to 9 <span class="fmt38">December</span> 2019] </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">Assistant</span> Professor}{<span class="fmt38">Yeshwantrao</span> <span class="fmt38">Chavan</span> College of Engineering}{<span class="fmt38">July</span> 2012 -  <span class="fmt38">July</span> 2017}{<span class="fmt38">Nagpur</span>, <span class="fmt38">Maharashtra</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Performed</span> <span class="fmt38">research</span> to <span class="fmt38">serve</span> as <span class="fmt38">basis</span> <span class="fmt38">for</span> <span class="fmt38">academic</span> <span class="fmt38">writing</span> <span class="fmt38"><span class="fmt39">for</span></span> <span class="fmt38">publication</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Mentored</span> <span class="fmt38">students</span> <span class="fmt38">for</span> <span class="fmt38">developing</span> <span class="fmt38">various</span> <span class="fmt38"><span class="fmt40">academic</span></span>/<span class="fmt38">research</span> <span class="fmt38">projects</span> <span class="fmt38">and</span> <span class="fmt38">publish</span> <span class="fmt38">paper</span> in <span class="fmt38">reputed</span> <span class="fmt38">journals</span> <span class="fmt38">and</span> <span class="fmt38">conferences</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Created</span> <span class="fmt38">materials</span> <span class="fmt38">and</span> <span class="fmt38">exercises</span> to <span class="fmt38">illustrate</span> <span class="fmt38">application</span> of <span class="fmt38">course</span> <span class="fmt38">concepts</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Collaborated</span> <span class="fmt38">with</span> <span class="fmt38">senior</span> <span class="fmt38">professors</span> on <span class="fmt38">curriculum</span> <span class="fmt38">revision</span>, <span class="fmt38">evaluation</span> of <span class="fmt38">course</span> <span class="fmt38">syllabus</span> <span class="fmt38">and</span> <span class="fmt38">lesson</span> <span class="fmt38">plans</span> <span class="fmt38">for</span> Computer <span class="fmt38">Technology</span> <span class="fmt38">curriculum</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Provided</span> <span class="fmt38">logical</span> <span class="fmt38">integration</span> <span class="fmt38">and</span> <span class="fmt38">continuity</span> of <span class="fmt38">Technical</span> <span class="fmt38">skills</span> <span class="fmt38">training</span> <span class="fmt38">and</span> <span class="fmt38">assessment</span> <span class="fmt38">across</span> 4-<span class="fmt38">year</span> <span class="fmt38">curriculum</span>. </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">Teaching</span> <span class="fmt38">Assistant</span>}{<span class="fmt38">Government</span> College of Engineering}{Aug 2010 - May 2012}{<span class="fmt38">Amravati</span>, <span class="fmt38">Maharashtra</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Conducted</span> <span class="fmt38">Theory</span> <span class="fmt38">and</span> <span class="fmt38">Practical</span> <span class="fmt38">Classes</span> <span class="fmt38">for</span> <span class="fmt38">Undergraduate</span> <span class="fmt38">students</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Prepared</span> Quiz <span class="fmt38">and</span> <span class="fmt38">Programming</span> <span class="fmt38">Assignments</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Worked</span> as <span class="fmt38">Expert</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Delivered</span> an <span class="fmt38">expert</span> <span class="fmt38">session</span> on "Trends <span class="fmt19">\&amp;</span> <span class="fmt38">Modeling</span> in <span class="fmt38">Deep</span> <span class="fmt38">Learning</span> <span class="fmt19">\&amp;</span> Neural <span class="fmt38">Networks"</span>, in <span class="fmt38">One</span> <span class="fmt38">Week</span> <span class="fmt38">Short</span> Term Training <span class="fmt38">Program</span> on "Data <span class="fmt38">Science</span> <span class="fmt38">with</span> <span class="fmt38">Statistical</span> <span class="fmt38">Methods</span> <span class="fmt38">Using</span> Python", <span class="fmt38">organized</span> by Center of <span class="fmt38">Excellence</span> Data <span class="fmt38">Science</span> <span class="fmt38">and</span> <span class="fmt38">Department</span> of Computer <span class="fmt38"><span class="fmt40">Science</span></span> <span class="fmt38">and</span> Engineering, G H <span class="fmt38">Raisoni</span> College of <span class="fmt40">Engineering</span>, <span class="fmt38">Nagpur</span> <span class="fmt38">from</span> 17th to 21st <span class="fmt38">January</span> 2022. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Delivered</span> a <span class="fmt38">session</span> on “<span class="fmt38">How</span> to <span class="fmt38">Write</span> a <span class="fmt38">Technical</span> Report/<span class="fmt38">Case</span> <span class="fmt38">Study</span> on Innovation” <span class="fmt38">organized</span> by Institution’s <span class="fmt40">Innovation</span> <span class="fmt38">Council</span> (<span class="fmt38">IICs</span>) of <span class="fmt38">Bajaj</span> Institute <span class="fmt39">of</span> <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> on <span class="fmt38">dated</span> 30th <span class="fmt38">January</span> 2021. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Delivered</span> a <span class="fmt38">lecture</span> in an online <span class="fmt38">seminar</span> on “<span class="fmt38">Use</span> of LaTeX in <span class="fmt38">Technical</span> <span class="fmt38">Writing</span>”, <span class="fmt38">for</span> <span class="fmt38">faculties</span> <span class="fmt38">and</span> <span class="fmt38">students</span> of <span class="fmt38">Sadabai</span> <span class="fmt38">Raisoni</span> <span class="fmt38">Women</span>`s College, <span class="fmt38">Nagpur</span> on <span class="fmt38">dated</span> 31st <span class="fmt38">October</span> 2020. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Conducted</span> a Session of C-<span class="fmt38">Programming</span> in an online <span class="fmt38">webinar</span> on “<span class="fmt38">Essence</span> of <span class="fmt38">Different</span> <span class="fmt38">Programming</span> <span class="fmt38">Languages</span>”, <span class="fmt38">organized</span> by <span class="fmt38">Department</span> of Computer Engineering, <span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> on 29th <span class="fmt38">July</span> 2020. </pre>
+		<pre><span class="fmt19">\item</span> Killer <span class="fmt38">Subject</span> <span class="fmt38">Lectures</span> on “<span class="fmt38">Theory</span> of <span class="fmt38">Computation</span>” IV Semester, <span class="fmt38">Department</span> of IT, <span class="fmt38">RGCER</span> <span class="fmt38">during</span> <span class="fmt38">EVEN</span> Term 2016-17. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Guest</span> <span class="fmt38">lecture</span> on “LaTeX Software” <span class="fmt38">for</span> <span class="fmt38">faculties</span> at <span class="fmt38">Cummins</span> College of Engineering <span class="fmt38">for</span> <span class="fmt38">Women</span>, <span class="fmt38">Nagpur</span> on 9th August 2016. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Resource</span> Person <span class="fmt38">for</span> <span class="fmt38">Two</span> <span class="fmt38">Day</span> <span class="fmt38">workshop</span> on “LaTeX-A <span class="fmt38">Reporting</span> Tool” <span class="fmt38">for</span> M. <span class="fmt38">Tech</span> <span class="fmt38">Students</span> of Computer <span class="fmt38">Technology</span> <span class="fmt38">Department</span> at <span class="fmt38">YCCE</span> on 24th-25th <span class="fmt38">July</span> 2015 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Resource</span> Person <span class="fmt38">for</span> Lab Session on “Parallel <span class="fmt38">Programming</span> <span class="fmt38">Paradigm</span> <span class="fmt38">using</span> <span class="fmt38">OpenMP</span>” in <span class="fmt38">ISTE</span> <span class="fmt38">approved</span> FDP on “<span class="fmt38">Application</span> of <span class="fmt38">GPU</span> <span class="fmt38">Programming</span> in Engineering <span class="fmt38">Fields-</span>2015 (<span class="fmt38">AGPE-</span>15)” in <span class="fmt38">association</span> <span class="fmt38">with</span> <span class="fmt38">IIT</span> <span class="fmt38">Guwahati</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Resource</span> Person <span class="fmt38">for</span> LaTeX in <span class="fmt38">two-week</span> <span class="fmt38">training</span> <span class="fmt38">program</span> <span class="fmt38">for</span> <span class="fmt38">students</span> on “<span class="fmt38">Learning</span> <span class="fmt38">Emerging</span> Engineering <span class="fmt38">Techniques</span>” <span class="fmt38">dated</span> 02 Jan 2015-12 <span class="fmt39">Jan</span> 2015. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Resource</span> Person <span class="fmt38">for</span> “Microsoft Word” in <span class="fmt38">Hands</span> on up-<span class="fmt38">gradation</span> of <span class="fmt38">Technical</span> <span class="fmt38">Skills</span> in <span class="fmt40">Microsoft</span> Office <span class="fmt38">for</span> <span class="fmt38">Non-Teaching</span> <span class="fmt38">staff</span> <span class="fmt38">under</span> <span class="fmt38">MGI</span>, <span class="fmt38">organized</span> by <span class="fmt38">Department</span> of Computer <span class="fmt38">Technology</span> in <span class="fmt38">coordination</span> <span class="fmt38">with</span> HR <span class="fmt38"><span class="fmt40">Department</span></span> <span class="fmt38">MGI</span>, <span class="fmt38">Nagpur</span> <span class="fmt38">dated</span> 26th -27<span class="fmt39">th</span> <span class="fmt38">Dec</span> 2014 <span class="fmt38">and</span> 9<span class="fmt39">th</span> -10<span class="fmt39">th</span> Jan 2015. </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Publications</span>} </pre>
+		<pre><span class="fmt19">\nocite</span>{<span class="fmt54">*</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19">\printbibliography</span>[heading=pubtype,title={<span class="fmt19"><span class="fmt47">\printinfo</span></span>{<span class="fmt19"><span class="fmt47">\faBook</span></span>}{Books}},type=book] </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\divider</span> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19">\printbibliography</span>[heading=pubtype,title={<span class="fmt19"><span class="fmt47">\printinfo</span></span>{<span class="fmt19"><span class="fmt47">\faFile</span></span>*[regular]}{Journal Articles}}, type=article] </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19">\printbibliography</span>[heading=pubtype,title={<span class="fmt19"><span class="fmt47">\printinfo</span></span>{<span class="fmt19"><span class="fmt47">\faUsers</span></span>}{Conference Proceedings}},type=inproceedings] </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">STTP</span>/FDP/Workshops <span class="fmt38">Organized</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Organized</span> 3 <span class="fmt38">Days</span> <span class="fmt38">TEQIP-</span>3 <span class="fmt38">sponsored</span> FDP on “<span class="fmt38">Role</span> of <span class="fmt38">Machine</span> <span class="fmt38">Learning</span> <span class="fmt19">\&amp;</span> <span class="fmt38">Artificial</span> <span class="fmt38">Intelligence</span> in Data <span class="fmt38">Analytics</span>” at Computer Engineering <span class="fmt38">Department</span>, <span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> in <span class="fmt38">collaboration</span> <span class="fmt38">with</span> <span class="fmt38">DBATU</span> <span class="fmt38">from</span> 24 to 26 <span class="fmt38">March</span> 2021 as <span class="fmt38">Coordinator</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Organized</span> a 4 <span class="fmt38">Days</span> FDP on “<span class="fmt38">Document</span> <span class="fmt38">Preparation</span>: A LaTeX <span class="fmt38">based</span> <span class="fmt38">Approach</span>” <span class="fmt38">for</span> <span class="fmt38">faculty</span> <span class="fmt38">members</span> of <span class="fmt38">Bajaj</span> Institute <span class="fmt39">of</span> <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> <span class="fmt38">from</span> 23rd – 26th <span class="fmt38">Feb</span> 2021 as <span class="fmt38">Convenor</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Organized</span> 2 <span class="fmt38">Days</span> <span class="fmt38">Webinars</span> on <span class="fmt38">"Essence</span> of <span class="fmt38">Different</span> <span class="fmt38">Programming</span> <span class="fmt38">Languages"</span>, <span class="fmt38">for</span> <span class="fmt38">faculty</span> <span class="fmt38">members</span> <span class="fmt38">and</span> <span class="fmt38">engineering</span> <span class="fmt38">aspirants</span> <span class="fmt38">from</span> 29th – 30<span class="fmt39">th</span> <span class="fmt38">June</span> 2020 as <span class="fmt38">Coordinator</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Organized</span> @ <span class="fmt38">Days</span> <span class="fmt38">SDP</span> on "LaTeX-A <span class="fmt38">Reporting</span> Tool", <span class="fmt38">for</span> M. <span class="fmt38">Tech</span>. <span class="fmt38">students</span> at <span class="fmt38">Yeshwantrao</span> <span class="fmt38">Chavan</span> College of Engineering, <span class="fmt38">Nagpur</span> <span class="fmt38">from</span> 15th – 16<span class="fmt39">th</span> <span class="fmt38">July</span> 2016 as <span class="fmt38">Coordinator</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Organized</span> @ <span class="fmt38">Days</span> <span class="fmt38">SDP</span> on "LaTeX-A <span class="fmt38">Reporting</span> Tool", <span class="fmt38">for</span> M. <span class="fmt38">Tech</span>. <span class="fmt38">students</span> at <span class="fmt38">Yeshwantrao</span> <span class="fmt38">Chavan</span> College of Engineering, <span class="fmt38">Nagpur</span> <span class="fmt38">from</span> 24th – 25<span class="fmt39">th</span> <span class="fmt38">July</span> 2015 as <span class="fmt38">Coordinator</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Organized</span> 5 <span class="fmt38">Days</span> FDP on <span class="fmt38">"Application</span> of <span class="fmt38">GPU</span> <span class="fmt38">Programming</span> in Engineering <span class="fmt38">Fields-</span>2015 (<span class="fmt38">AGPE-</span>15)" in <span class="fmt38">association</span> <span class="fmt38">with</span> <span class="fmt38">IIT</span> <span class="fmt38">Guwahati</span> at <span class="fmt38">Yeshwantrao</span> <span class="fmt38">Chavan</span> College of Engineering, <span class="fmt38">Nagpur</span> <span class="fmt38">for</span> <span class="fmt38">faculty</span> <span class="fmt38">members</span> <span class="fmt19">\&amp;</span> M. <span class="fmt38">Tech</span> <span class="fmt38">students</span> <span class="fmt38">from</span> 20th – 24<span class="fmt39">th</span> <span class="fmt38">February</span> 2015 as <span class="fmt38">Organizing</span> <span class="fmt38">Committee</span> <span class="fmt38">Member</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%%</span><span class="fmt18"> </span><span class="fmt18">Switch</span><span class="fmt18"> </span><span class="fmt18">to</span><span class="fmt18"> </span><span class="fmt18">the</span><span class="fmt18"> </span><span class="fmt18">right</span><span class="fmt18"> </span><span class="fmt18">column.</span><span class="fmt18"> </span><span class="fmt18">This</span><span class="fmt18"> </span><span class="fmt18">will</span><span class="fmt18"> </span><span class="fmt18">now</span><span class="fmt18"> </span><span class="fmt18">automatically</span><span class="fmt18"> </span><span class="fmt18">move</span><span class="fmt18"> </span><span class="fmt18">to</span><span class="fmt18"> </span><span class="fmt18">the</span><span class="fmt18"> </span><span class="fmt18">second</span> </pre>
+		<pre><span class="fmt18">%%</span><span class="fmt18"> </span><span class="fmt18">page</span><span class="fmt18"> </span><span class="fmt18">if</span><span class="fmt18"> </span><span class="fmt18">the</span><span class="fmt18"> </span><span class="fmt18">content</span><span class="fmt18"> </span><span class="fmt18">is</span><span class="fmt18"> </span><span class="fmt18">too</span><span class="fmt18"> </span><span class="fmt18">long.</span> </pre>
+		<pre><span class="fmt19">\switchcolumn</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Skills</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{Data <span class="fmt38">Science</span> Stack}{5} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> Python </pre>
+		<pre>    <span class="fmt19">\item</span> R </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{<span class="fmt38">Machine</span> <span class="fmt38">Learning</span>}{4} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> Regression </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Prediction</span>  </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Clustering</span> <span class="fmt19">\&amp;</span> <span class="fmt38">Classification</span> </pre>
+		<pre>    <span class="fmt19">\item</span> Natural <span class="fmt38">Language</span> <span class="fmt38">Processing</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{LaTeX}{5} </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\divider</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{Web <span class="fmt38">Technologies</span>}{3.5} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> HTML, <span class="fmt38">CSS</span> <span class="fmt19">\&amp;</span> <span class="fmt38">javascript</span> </pre>
+		<pre>    <span class="fmt18">%\item</span><span class="fmt18"> </span><span class="fmt18">javascript</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt18">%\cvskill{Database}{3}</span> </pre>
+		<pre><span class="fmt18">%\begin{itemize}</span> </pre>
+		<pre> <span class="fmt18">%</span><span class="fmt18">   </span><span class="fmt18">\item</span><span class="fmt18"> </span><span class="fmt18">MySQL</span> </pre>
+		<pre><span class="fmt18">%\end{itemize}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{Curriculum <span class="fmt38">Development</span>}{5} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> B. E. in Computer <span class="fmt38">Technology</span> </pre>
+		<pre>    <span class="fmt19">\item</span> B.Sc. in IT </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Education</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{Ph. D. \ in Computer <span class="fmt38">Science</span> <span class="fmt19">\&amp;</span> Engineering}{<span class="fmt38">Government</span> College of Engineering(<span class="fmt38">SGBAU</span>)}{<span class="fmt38">Nov</span> 2019}{<span class="fmt38">Amravati</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> Ph. D <span class="fmt38">Thesis</span>: Design of an <span class="fmt38">Efficient</span> <span class="fmt38">Automata</span> <span class="fmt38">Theory</span> <span class="fmt38">Based</span> <span class="fmt38">Approach</span> <span class="fmt38">for</span> <span class="fmt38">Modeling</span> Time <span class="fmt38">Series</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Registration</span> No.: <span class="fmt38">SGBAU</span>/Ph.D./<span class="fmt38">COMP</span>.<span class="fmt38">ENGG</span>. /6560/2014 </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{M. <span class="fmt38">Tech</span>. \ in Computer <span class="fmt38">Science</span> <span class="fmt19">\&amp;</span> Engineering}{<span class="fmt38">Government</span> College of Engineering(<span class="fmt38">SGBAU</span>)}{May 2012}{<span class="fmt38">Amravati</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> M. <span class="fmt38">Tech</span> Dissertation: Analysis of <span class="fmt38">Temperature</span> <span class="fmt38">and</span> <span class="fmt38">Humidity</span> <span class="fmt38">data</span> <span class="fmt38">for</span> <span class="fmt38">future</span> <span class="fmt38">values</span> <span class="fmt38">prediction</span> <span class="fmt38">using</span> an <span class="fmt38">efficient</span> Data <span class="fmt38">Mining</span> <span class="fmt38">Technique</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Passed</span> <span class="fmt38">with</span> 8.67 <span class="fmt38">CGPA</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">GATE</span> 2010 \ in Computer <span class="fmt38">Science</span>}{<span class="fmt38">conducted</span> by <span class="fmt38">IIT</span>, <span class="fmt38">Guwahati</span>}{<span class="fmt38">Feb</span> 2010}{} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Passed</span> <span class="fmt38">with</span> 86.67<span class="fmt19"><span class="fmt38">\%</span></span><span class="fmt38">tile</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{B. E. \ in Information <span class="fmt38">Technology</span>}{<span class="fmt38">Bapurao</span> <span class="fmt38">Deshmukh</span> College of Engineering(<span class="fmt38">RTMNU</span>)}{May 2010}{<span class="fmt38">Wardha</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> B. E. <span class="fmt38">Project</span>: <span class="fmt38">Latin</span> <span class="fmt38">Character</span> <span class="fmt38">Recognition</span> <span class="fmt38">using</span> <span class="fmt38">Artificial</span> Neural <span class="fmt38">Networks</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Passed</span> <span class="fmt38">with</span> 70.59<span class="fmt19">\%</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">HSC</span>}{M. P. Deo <span class="fmt38">Memorial</span> <span class="fmt38">Science</span> College}{<span class="fmt38">Feb</span> 2006}{<span class="fmt38">Nagpur</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38"><span class="fmt39">Passed</span></span> <span class="fmt38"><span class="fmt39">with</span></span> 72.33<span class="fmt19">\%</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvevent</span></span>{<span class="fmt38">SSC</span>}{<span class="fmt38">Bishop</span> <span class="fmt38">Cotton</span> <span class="fmt38">School</span>}{<span class="fmt38">Mar</span> 2004}{<span class="fmt38">Nagpur</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38"><span class="fmt39">Passed</span></span> <span class="fmt38"><span class="fmt39">with</span></span> 64.67<span class="fmt19">\%</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Subjects</span> <span class="fmt38">Taught</span>} </pre>
+		<pre>{ </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> UG <span class="fmt38">Courses</span><span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{<span class="fmt38">Theory</span> of <span class="fmt38">Computations</span>}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{Compiler Design}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{Natural <span class="fmt38">Language</span> <span class="fmt38">Processing</span>}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{Basic Computer <span class="fmt38">Programming</span> in C}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{Python <span class="fmt38">Programming</span>} <span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{<span class="fmt38">Introduction</span> to Data <span class="fmt38">Science</span> <span class="fmt38">with</span> R} </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt39">UG</span> <span class="fmt38">Projects</span>: 9<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19">\item</span> PG <span class="fmt38"><span class="fmt40">Courses</span></span><span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{<span class="fmt38">Semantic</span> Web}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt39">PG</span> <span class="fmt38"><span class="fmt40">Projects</span></span>: 3 </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{Patents <span class="fmt19">\&amp;</span> Copyrights} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvachievement</span></span>{<span class="fmt19"><span class="fmt47">\faCircle</span></span>}{International Patent: A System <span class="fmt38">for</span> Human <span class="fmt38">Cognitive</span> <span class="fmt38">States</span> <span class="fmt38">Classification</span>}{Patent <span class="fmt38">Number</span>: 2021102810} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvachievement</span></span>{<span class="fmt19"><span class="fmt47">\faCircle</span></span>}{Patent <span class="fmt38">Filed</span>: Real-Time E-<span class="fmt38">Challan</span> System <span class="fmt38">and</span> <span class="fmt38">Method</span> <span class="fmt38">for</span> No-<span class="fmt38">Helmet</span> <span class="fmt38">and</span> Triple <span class="fmt38">Seats</span> <span class="fmt38">Two-Wheeler</span> <span class="fmt38">Identification</span> <span class="fmt38">for</span> <span class="fmt38">Traffic</span> Management}{<span class="fmt38">Application</span> <span class="fmt38">Number</span>: 202221025085} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\divider</span></span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvachievement</span></span>{<span class="fmt19"><span class="fmt47">\faCopyright</span></span>}{Copyright <span class="fmt38">Registered</span>: <span class="fmt38">Document</span> <span class="fmt38">Preparation</span>: A Latex-<span class="fmt38">based</span> <span class="fmt38">approach</span> (<span class="fmt38">PPT</span>)}{<span class="fmt38">Registration</span> <span class="fmt38">Number</span>: L-69262/2017} </pre>
+		<pre><span class="fmt19">\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Citations</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt19">\large</span>{Google Scholar: 99} </pre>
+		<pre><span class="fmt19">\subitem</span> h-<span class="fmt38">index</span>: 4 </pre>
+		<pre><span class="fmt19">\subitem</span> i10 <span class="fmt38">index</span>: 4 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt19">\large</span>{<span class="fmt38">Scopus</span>: 5} </pre>
+		<pre><span class="fmt19">\subitem</span> <span class="fmt40">h-</span><span class="fmt38"><span class="fmt40">index</span></span>: 2 </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Affiliations</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Professional</span> <span class="fmt38">Memberships</span>: </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt38">ISTE</span> <span class="fmt38">Life</span> <span class="fmt38">Member</span> (LM 89401) </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt38">ACM</span> <span class="fmt38"><span class="fmt40">Professional</span></span> <span class="fmt38"><span class="fmt40">Member</span></span> (0136548) </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt38">IAENG</span> <span class="fmt38"><span class="fmt40">Member</span></span> (207334) </pre>
+		<pre>     </pre>
+		<pre><span class="fmt18">%\divider</span> </pre>
+		<pre>    <span class="fmt19">\item</span> <span class="fmt38">Reviewer</span> at: </pre>
+		<pre>    <span class="fmt19">\subitem</span> International Journal of Computers <span class="fmt38">and</span> <span class="fmt19">\subitem</span> <span class="fmt38">Applications</span> </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt38">IGI</span> Global </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt40">International</span> <span class="fmt38">Conference</span> on Automation, <span class="fmt19">\subitem</span> <span class="fmt38">Computing</span> <span class="fmt38">and</span> <span class="fmt38">Communication-</span>2020 </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt40">International</span> <span class="fmt38"><span class="fmt40">Conference</span></span> on <span class="fmt38">Advance</span> </pre>
+		<pre>    <span class="fmt19">\subitem</span> <span class="fmt38"><span class="fmt40">Computing</span></span> <span class="fmt38">Technologies</span> <span class="fmt38">and</span> <span class="fmt38">Applications</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{Portfolios <span class="fmt38">Handeled</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Academic</span> <span class="fmt38">Coordinator</span>, Computer Engineering <span class="fmt38">Department</span>,  <span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> <span class="fmt38">from</span> 12th August 2021. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Member</span> of <span class="fmt38">IQAC</span> <span class="fmt38">Committee</span>, <span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> <span class="fmt38">from</span> 6th <span class="fmt38">July</span> 2021. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Department</span> <span class="fmt38">Coordinator</span>, <span class="fmt38">NAAC</span> <span class="fmt38">Preparatory</span> <span class="fmt38">Committee</span>, <span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> <span class="fmt38">from</span> 26th August 2020. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">MOOCs</span>/<span class="fmt38">NPTEL</span>/<span class="fmt38">Coursera</span> Online <span class="fmt38">Course</span> <span class="fmt38">Coordinator</span>, <span class="fmt38">Bajaj</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Wardha</span> <span class="fmt38">from</span> 26th August 2020. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Member</span>, Board of <span class="fmt38">Studies</span> <span class="fmt39">of</span> <span class="fmt38">Allied</span> <span class="fmt38">Sciences</span>, <span class="fmt38">Datta</span> <span class="fmt38">Meghe</span> Institute of <span class="fmt38">Medical</span> <span class="fmt38"><span class="fmt40">Sciences</span></span> (<span class="fmt38">Deemed</span> to be <span class="fmt38">University</span>), <span class="fmt38">Wardha</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Department</span> <span class="fmt38">Coordinator</span>, Computer Engineering, BIT, <span class="fmt38"><span class="fmt40">Wardha</span></span> <span class="fmt38">from</span> 01-07-2018 to 22-12-2019. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">SETU</span>/FC <span class="fmt38">Coordinator</span> <span class="fmt38">for</span> First <span class="fmt38">Year</span> Engineering <span class="fmt38">Centralized</span> <span class="fmt38">Admission</span> <span class="fmt38">Process</span> 2018-19 <span class="fmt38">and</span> 2019-20, 2021-22. </pre>
+		<pre><span class="fmt19">\item</span> Co-<span class="fmt38">Incharge</span>, <span class="fmt38">Exam</span> <span class="fmt38">Committee</span>, <span class="fmt38">DBATU</span> <span class="fmt38">End</span> Semester <span class="fmt38">Exam</span> Winter 2017 (B. <span class="fmt38">Tech</span>) at BIT, <span class="fmt38">Wardha</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Member</span> of <span class="fmt38">the</span> Sub-<span class="fmt38">Committee</span>, Board of <span class="fmt38">Studies</span>, Computer <span class="fmt38">Technology</span>, <span class="fmt38">YCCE</span>, <span class="fmt38">Nagpur</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Worked</span> as <span class="fmt38">Officer</span> In-<span class="fmt38">charge</span> (Computer <span class="fmt38">Technology</span> <span class="fmt38">Department</span>) <span class="fmt38">for</span> <span class="fmt38">conduction</span> of B. <span class="fmt38">Tech</span> <span class="fmt38">End</span> Semester Examination <span class="fmt38">under</span> <span class="fmt38">autonomy</span> <span class="fmt38">EVEN</span> 2016-17. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Worked</span> as <span class="fmt38">Practical</span> <span class="fmt38">Exam</span> In-<span class="fmt38">charge</span>, <span class="fmt38">ESE</span> <span class="fmt38">ODD</span>/ <span class="fmt38">ODD-Resit</span> 2016-17, <span class="fmt38">ODD</span>/<span class="fmt38"><span class="fmt40">ODD-Resit</span></span>/<span class="fmt38">EVEN</span> 2015-16 <span class="fmt38">for</span> Computer <span class="fmt38">Technology</span> <span class="fmt38">Department</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Worked</span> as <span class="fmt38">committee</span> <span class="fmt38">member</span> in B. <span class="fmt38">Tech</span> <span class="fmt38">End</span> Semester Examination <span class="fmt38">under</span> <span class="fmt38">autonomy</span> <span class="fmt38">ODD</span>/ <span class="fmt38"><span class="fmt39">ODD</span></span> <span class="fmt38">RESIT</span> <span class="fmt38">Sem</span> 2013-14, <span class="fmt38">EVEN</span> 2014-15, M. <span class="fmt38">Tech</span> <span class="fmt38">End</span> Semester Examination <span class="fmt38">ODD</span> 2012-13. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Departmental</span> Training <span class="fmt38">and</span> <span class="fmt38">Placement</span> <span class="fmt38">Committee</span> In-<span class="fmt38">charge</span>. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Entrepreneurship</span> <span class="fmt38">Development</span> <span class="fmt38">Cell</span> <span class="fmt38"><span class="fmt40">Departmental</span></span> <span class="fmt38">Coordinator</span> 2014-15. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38"><span class="fmt40">Departmental</span></span> <span class="fmt38">GATE</span> Club <span class="fmt38">Committee</span> In-<span class="fmt38">charge</span> 2012-13. </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38"><span class="fmt40">Departmental</span></span> <span class="fmt38">Students</span> <span class="fmt38">Activity</span> <span class="fmt38"><span class="fmt40">Committee</span></span> <span class="fmt40">In-</span><span class="fmt38"><span class="fmt40">charge</span></span> 2012-14. </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{FDP/Workshops <span class="fmt38">Attended</span>} </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 5 <span class="fmt38">Days</span> <span class="fmt38">AICTE</span> Training <span class="fmt38">and</span> <span class="fmt38">Learning</span> (<span class="fmt38">ATAL</span>) <span class="fmt38">Academy</span> Online <span class="fmt38">Elementary</span> FDP on <span class="fmt38">"Application</span> of <span class="fmt38">Robotics</span> in <span class="fmt38">enhancing</span> <span class="fmt38">learning</span> <span class="fmt38">contents"</span> <span class="fmt38">organized</span> by National Institute of <span class="fmt38">Technology</span> <span class="fmt38">Agartala</span> <span class="fmt38">during</span> 5th <span class="fmt38">July</span> 2021 to 9<span class="fmt39">th</span> <span class="fmt38"><span class="fmt39">July</span></span> 2021 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 1 <span class="fmt38">Week</span> FDP on "LaTeX" <span class="fmt38">organized</span> by <span class="fmt38">RMD</span> <span class="fmt38">Sinhgad</span> <span class="fmt38">School</span> of Engineering, <span class="fmt38">Warje</span> on <span class="fmt38">Spoken</span> Tutorial <span class="fmt38">from</span> 28th April to 2nd May 2020 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 1 <span class="fmt38">Week</span> FDP on <span class="fmt38">"Cyber</span> <span class="fmt38">Security</span> <span class="fmt19">\&amp;</span> <span class="fmt38"><span class="fmt39">Cyber</span></span> <span class="fmt38">Forensics"</span> <span class="fmt38">organized</span> by <span class="fmt38">Jhulelal</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Nagpur</span> <span class="fmt38">from</span> 13th to 18<span class="fmt39">th</span> <span class="fmt38">January</span> 2020 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 4 <span class="fmt38">Days</span> FDP on <span class="fmt38">"Recent</span> Trends <span class="fmt38">and</span> <span class="fmt38">Technologies</span> in <span class="fmt38">Big</span> Data <span class="fmt38">Analytics"</span> <span class="fmt38">organized</span> by <span class="fmt38">Shri</span> <span class="fmt38">Ramdeobaba</span> College of Engineering <span class="fmt38">and</span> Management, <span class="fmt38">Nagpur</span> <span class="fmt38">from</span> 19th to 22nd <span class="fmt38">December</span> 2016 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 3 <span class="fmt38">Days</span> <span class="fmt38">"Dale</span> <span class="fmt38">Carnegie</span> Training" at <span class="fmt38">Meghe</span> <span class="fmt38">Finishing</span> <span class="fmt38">School</span> <span class="fmt38">from</span> 16th to 18<span class="fmt39">th</span> May 2016 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 2 <span class="fmt38">Weeks</span> FDP on "Computer <span class="fmt38">Programming"</span> <span class="fmt38">organized</span> by <span class="fmt38">IIT</span>, Bombay <span class="fmt38">through</span> <span class="fmt38">NMEICT</span> at <span class="fmt38">Yeshwantrao</span> <span class="fmt38">Chavan</span> College of Engineering, <span class="fmt38">Nagpur</span> <span class="fmt38">from</span> 20th May 2014 to 21st <span class="fmt38">June</span> 2014 </pre>
+		<pre><span class="fmt19">\item</span> <span class="fmt38">Attended</span> 3 <span class="fmt38">Days</span> FDP on " Signal <span class="fmt38">Processing</span> <span class="fmt38">and</span> Image <span class="fmt38"><span class="fmt39">Processing</span></span> <span class="fmt38">using</span> <span class="fmt38">MATLAB"</span> <span class="fmt38">organized</span> by Computer <span class="fmt38">Technology</span> <span class="fmt38">Department</span> in <span class="fmt38">collaboration</span> <span class="fmt38">with</span> <span class="fmt38">Mathworks</span> <span class="fmt38">from</span> 13th to 15<span class="fmt39">th</span> <span class="fmt38">December</span> 2013 </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">itemize</span></span><span class="fmt20">}</span> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Strengths</span>} </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{Positive <span class="fmt38">Attitude</span>}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{<span class="fmt38">Zeal</span> to <span class="fmt38">Learn</span> New Things}<span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvtag</span></span>{Motivator <span class="fmt19">\&amp;</span> Leader} </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\divider\smallskip</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\cvtag{UX}</span> </pre>
+		<pre><span class="fmt18">%\cvtag{Mobile</span><span class="fmt18"> </span><span class="fmt18">Devices</span><span class="fmt18"> </span><span class="fmt18">\&amp;</span><span class="fmt18"> </span><span class="fmt18">Applications}</span> </pre>
+		<pre><span class="fmt18">%\cvtag{Product</span><span class="fmt18"> </span><span class="fmt18">Management</span><span class="fmt18"> </span><span class="fmt18">\&amp;</span><span class="fmt18"> </span><span class="fmt18">Marketing}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Languages</span>} </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{<span class="fmt38">English</span>}{5} </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{<span class="fmt38">Marathi</span>}{4} </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvskill</span></span>{Hindi}{3.5} <span class="fmt18">%%</span><span class="fmt18"> </span><span class="fmt18">supports</span><span class="fmt18"> </span><span class="fmt18">X.5</span><span class="fmt18"> </span><span class="fmt18">values.</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\cvsection{Referees}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%</span><span class="fmt18"> </span><span class="fmt18">\cvref{name}{email}{mailing</span><span class="fmt18"> </span><span class="fmt18">address}</span> </pre>
+		<pre><span class="fmt18">%\cvref{Prof.\</span><span class="fmt18"> </span><span class="fmt18">Alpha</span><span class="fmt18"> </span><span class="fmt18">Beta}{Institute}{a.beta@university.edu}</span> </pre>
+		<pre><span class="fmt18">%{Address</span><span class="fmt18"> </span><span class="fmt18">Line</span><span class="fmt18"> </span><span class="fmt18">1\\Address</span><span class="fmt18"> </span><span class="fmt18">line</span><span class="fmt18"> </span><span class="fmt18">2}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\divider</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\cvref{Prof.\</span><span class="fmt18"> </span><span class="fmt18">Gamma</span><span class="fmt18"> </span><span class="fmt18">Delta}{Institute}{g.delta@university.edu}</span> </pre>
+		<pre><span class="fmt18">%{Address</span><span class="fmt18"> </span><span class="fmt18">Line</span><span class="fmt18"> </span><span class="fmt18">1\\Address</span><span class="fmt18"> </span><span class="fmt18">line</span><span class="fmt18"> </span><span class="fmt18">2}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">paracol</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt18">%\newpage</span> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">References</span>} </pre>
+		<pre><span class="fmt19">\columnratio</span>{0.5} </pre>
+		<pre> </pre>
+		<pre><span class="fmt20">\begin{</span><span class="fmt20"><span class="fmt49">paracol</span></span><span class="fmt20">}</span>{2} </pre>
+		<pre><span class="fmt19">\centering</span> </pre>
+		<pre> <span class="fmt19">\textbf</span>{Dr. M. <span class="fmt39">M</span> <span class="fmt38">Raghuwanshi</span>}<span class="fmt19">\\</span>{<span class="fmt38">Director</span> <span class="fmt19">\&amp;</span> Professor}<span class="fmt19">\\</span> </pre>
+		<pre> {<span class="fmt38">Department</span> of Computer Engineering}<span class="fmt19">\\</span> </pre>
+		<pre> {<span class="fmt38">Symbiosis</span> Institute of <span class="fmt38">Technology</span>, <span class="fmt38">Nagpur</span>, <span class="fmt38">India</span>}<span class="fmt19">\\</span> </pre>
+		<pre> <span class="fmt19"><span class="fmt47">\email</span></span>{mm.<span class="fmt38">raghuwanshi</span>@<span class="fmt38">gmail</span>.<span class="fmt38">com</span>}<span class="fmt19">\\</span><span class="fmt19"><span class="fmt47">\phone</span></span>{+91-9764996596 (R)} <span class="fmt19">\newline</span> </pre>
+		<pre> <span class="fmt19">\switchcolumn</span> </pre>
+		<pre> <span class="fmt19">\textbf</span>{Dr. P. N. <span class="fmt38">Chatur</span>}<span class="fmt19">\\</span>{Professor}<span class="fmt19">\\</span>{<span class="fmt38">Department</span> of Computer <span class="fmt38">Science</span> <span class="fmt19">\&amp;</span> Engineering}<span class="fmt19">\\</span> </pre>
+		<pre> {<span class="fmt38">Government</span> College of Engineering, <span class="fmt38">Amravati</span>, <span class="fmt38">India</span>}<span class="fmt19">\\</span><span class="fmt19"><span class="fmt47">\email</span></span>{<span class="fmt38">prashant</span><span class="fmt47">_</span><span class="fmt38">chatur</span>@<span class="fmt38">rediffmail</span>.<span class="fmt38">com</span>}<span class="fmt19">\\</span> <span class="fmt19"><span class="fmt47">\phone</span></span>{+91-9860135925 (R)}<span class="fmt19">\newline</span> </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">paracol</span></span><span class="fmt20">}</span> </pre>
+		<pre> </pre>
+		<pre><span class="fmt19"><span class="fmt47">\cvsection</span></span>{<span class="fmt38">Declaration</span>} </pre>
+		<pre>{I <span class="fmt38">hereby</span> <span class="fmt38">declare</span> <span class="fmt38">that</span> <span class="fmt38">the</span> <span class="fmt38">provided</span> <span class="fmt38">information</span> as <span class="fmt38">above</span> is <span class="fmt38">true</span> to <span class="fmt38">the</span> best of my <span class="fmt38">knowledge</span>.<span class="fmt19">\\</span> </pre>
+		<pre>\ <span class="fmt19">\\</span> </pre>
+		<pre>\ <span class="fmt19">\\</span> </pre>
+		<pre>\ <span class="fmt19">\\</span> </pre>
+		<pre><span class="fmt38">Date</span>:{ <span class="fmt19">\today</span>} </pre>
+		<pre>{<span class="fmt19">\textbf</span>{<span class="fmt19">\hfill</span> Dr. <span class="fmt38">Sagarkumar</span> S. <span class="fmt38">Badhiye</span>}} </pre>
+		<pre><span class="fmt20">\end{</span><span class="fmt20"><span class="fmt49">document</span></span><span class="fmt20">}</span> </pre></body></html>
